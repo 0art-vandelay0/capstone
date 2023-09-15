@@ -16,3 +16,4 @@
 -   12p: research Python + React marriage
 -   12:45a: research Google Map API
 -   1:30p: start to commit necessary code files written over the last two days
+-   2p: Research 'git reset' to undo recent commmits and hide sensitive files
