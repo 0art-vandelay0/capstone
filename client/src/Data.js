@@ -8,7 +8,6 @@ function Data() {
             .then(res => res.json())
             .then(data => {
                 setData(data);
-                console.log(data);
             });
     }, []);
 

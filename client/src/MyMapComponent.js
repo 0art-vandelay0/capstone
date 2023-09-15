@@ -3,8 +3,9 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import BathroomDetails from './BathroomDetails';
 
 function MyMapComponent() {
+    console.log("Component Mounted"); // Debugging line
     // toggle T/F to enable/disable map
-    const shouldLoadMap = true;
+    const shouldLoadMap = false;
 
     const [locations, setLocations] = useState([]);
     const [selectedBathroom, setSelectedBathroom] = useState(null);
