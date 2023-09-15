@@ -19,3 +19,4 @@
 -   2p: Research 'git reset' to undo recent commmits and hide sensitive files
 -   3p: Debugging, map is mounting twice in paretn container. Used `console.log("Component Mounted");` to confirm yes.
 -   3:45: Having trouble getting all python libraries to work on a single shared interpreter. Defaulted to 3.9 out of ease of use.
+-   4p research Twilio and use-cases
