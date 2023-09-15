@@ -3,6 +3,7 @@ from flask_cors import CORS
 from pymongo import MongoClient
 from dotenv import load_dotenv
 from Twilio import send_sms
+from flask import request
 import os
 
 load_dotenv()
@@ -31,6 +32,7 @@ def bathrooms():
     try:
         bathrooms_collection = Database.db['Bathrooms']
         bathrooms = list(bathrooms_collection.find())
+        print("Bathrooms fetched:", bathrooms)  # Debug print
         for bathroom in bathrooms:
             bathroom["_id"] = str(bathroom["_id"])
         return jsonify({"bathrooms": bathrooms})
@@ -42,6 +44,11 @@ def bathrooms():
 @app.route('/send_sms', methods=['POST'])
 def send_sms_route():
     try:
+        data = request.json  # Get the JSON data from the POST request
+        body = data['body']
+        to = data['to']
+        from_ = data['from']
+
         message_sid = send_sms(body, to, from_)
         return jsonify({"success": True, "message_sid": message_sid})
     except Exception as e:
