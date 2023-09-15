@@ -20,3 +20,11 @@
 -   3p: Debugging, map is mounting twice in paretn container. Used `console.log("Component Mounted");` to confirm yes.
 -   3:45: Having trouble getting all python libraries to work on a single shared interpreter. Defaulted to 3.9 out of ease of use.
 -   4p research Twilio and use-cases
+-   4:40 encountering Twilio username error
+
+        POST /Accounts/your_twilio_account_sid/Messages.json
+        Twilio returned the following information:
+        Unable to create record: Authentication Error - invalid username
+        More information may be available here:
+        https://www.twilio.com/docs/errors/20003
+
