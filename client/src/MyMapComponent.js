@@ -32,7 +32,7 @@ function MyMapComponent() {
     }, []);
 
     const containerStyle = {
-        width: '400px',
+        width: '525px',
         height: '400px'
     };
 

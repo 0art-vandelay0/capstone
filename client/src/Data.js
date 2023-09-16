@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Data.css';
 
+
 function Data() {
     const [data, setData] = useState({ bathrooms: [] });
 
