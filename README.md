@@ -1,4 +1,4 @@
-### Research & Planning Log
+### Planning, Task, & Debugging Log
 
 #### Wednesday 9/13/2023
 
