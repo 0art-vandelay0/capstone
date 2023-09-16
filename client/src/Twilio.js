@@ -4,7 +4,12 @@ const Twilio = ({ bathroomCode }) => {
     const [phoneNumber, setPhoneNumber] = useState('');
 
     const handleSendSMS = async () => {
-        const payload = { phoneNumber, bathroomCode };
+        const payload = { 
+            body: `Your bathroom code is ${bathroomCode}`, 
+            to: phoneNumber, 
+            // from_: 'TWILIO_PHONE'
+
+        };
         const response = await fetch('/send_sms', {
             method: 'POST',
             headers: {

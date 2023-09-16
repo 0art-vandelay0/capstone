@@ -49,10 +49,12 @@ def bathrooms():
 @app.route('/send_sms', methods=['POST'])
 def send_sms_route():
     try:
-        # Extract parameters from request body here (you need to actually do this part)
+        # Fetch body and to from the request payload
         body = request.json.get('body')
         to = request.json.get('to')
-        from_ = request.json.get('from')
+
+        # Fetch from_ from environment variables
+        from_ = os.environ.get("TWILIO_PHONE")
 
         print(f"Body: {body}, To: {to}, From: {from_}")  # Debugging line
 
