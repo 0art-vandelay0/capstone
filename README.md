@@ -31,3 +31,5 @@
 -   4:55p: Finally got .env variables to read but still unsuccessful POST sms. Need to figure out passing body, to, from
 
         Body: None, To: None, From: None
+
+-   SMS works now! Test sms was sent to my phone with Coava code when prompted.
