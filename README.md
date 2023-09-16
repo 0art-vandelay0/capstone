@@ -33,3 +33,5 @@
         Body: None, To: None, From: None
 
 -   6:15p: SMS works now! Test sms was sent to my phone with Coava code when prompted.
+-   6:30p: Update mongodb with remaining bathroom data
+-   7p: Updated all Lat & Lng of locations to shortened doubles
