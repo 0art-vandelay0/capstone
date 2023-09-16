@@ -32,4 +32,4 @@
 
         Body: None, To: None, From: None
 
--   SMS works now! Test sms was sent to my phone with Coava code when prompted.
+-   6:15p: SMS works now! Test sms was sent to my phone with Coava code when prompted.
