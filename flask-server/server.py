@@ -1,12 +1,17 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-from pymongo import MongoClient
-from dotenv import load_dotenv
-from Twilio import send_sms
-from flask import request
-import os
 
+import os
+from flask import request
+from Twilio import send_sms
+from pymongo import MongoClient
+from flask_cors import CORS
+from flask import Flask, jsonify
+from dotenv import load_dotenv
 load_dotenv()
+
+
+# print("Account SID:", os.environ.get("TWILIO_ACCOUNT_SID"))
+# print("Auth Token:", os.environ.get("TWILIO_AUTH_TOKEN"))
+# print("Twilio SID from server.py:", os.environ.get("TWILIO_ACCOUNT_SID"))
 
 
 class Database:
@@ -44,15 +49,19 @@ def bathrooms():
 @app.route('/send_sms', methods=['POST'])
 def send_sms_route():
     try:
-        data = request.json  # Get the JSON data from the POST request
-        body = data['body']
-        to = data['to']
-        from_ = data['from']
+        # Extract parameters from request body here (you need to actually do this part)
+        body = request.json.get('body')
+        to = request.json.get('to')
+        from_ = request.json.get('from')
+
+        print(f"Body: {body}, To: {to}, From: {from_}")  # Debugging line
 
         message_sid = send_sms(body, to, from_)
+        print(f"Message SID: {message_sid}")  # Debugging line
+
         return jsonify({"success": True, "message_sid": message_sid})
     except Exception as e:
-        print(e)
+        print(f"An error occurred: {e}")  # Debugging line
         return jsonify({"error": "An error occurred"}), 500
 
 
