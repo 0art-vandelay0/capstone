@@ -1,11 +1,11 @@
 import os
-from flask import request
 from Twilio import send_sms
 from pymongo import MongoClient
 from flask_cors import CORS
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request, make_response
 from dotenv import load_dotenv
 import sys
+import logging
 
 
 load_dotenv()
@@ -31,7 +31,8 @@ class Database:
 
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, origins=["http://localhost:3000"])
 Database.connect()
 
 
@@ -45,8 +46,8 @@ def bathrooms():
             bathroom["_id"] = str(bathroom["_id"])
         return jsonify({"bathrooms": bathrooms})
     except Exception as e:
-        print(e)
-        return jsonify({"error": "An error occurred"}), 500
+        print(f"An error occurred: {e}")  # Debugging line
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/send_sms', methods=['POST'])
@@ -65,9 +66,31 @@ def send_sms_route():
         print(f"Message SID: {message_sid}")  # Debugging line
 
         return jsonify({"success": True, "message_sid": message_sid})
+
     except Exception as e:
         print(f"An error occurred: {e}")  # Debugging line
-        return jsonify({"error": "An error occurred"}), 500
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/search_nearest', methods=['GET'])
+def search_nearest():
+    print("Incoming request", request.args)  # Debugging line
+    lat = request.args.get('lat')
+    lon = request.args.get('lon')
+    bathrooms_collection = Database.db['Bathrooms']
+
+    bathrooms = bathrooms_collection.find({
+        "location": {
+            "$near": {
+                "$geometry": {
+                    "type": "Point",
+                    "coordinates": [float(lon), float(lat)]
+                }
+            }
+        }
+    }).limit(5)  # get 5 nearest
+
+    return jsonify({"nearest_bathrooms": list(bathrooms)})
 
 
 if __name__ == "__main__":
