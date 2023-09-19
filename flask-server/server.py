@@ -1,4 +1,3 @@
-
 import os
 from flask import request
 from Twilio import send_sms
@@ -6,8 +5,12 @@ from pymongo import MongoClient
 from flask_cors import CORS
 from flask import Flask, jsonify
 from dotenv import load_dotenv
+import sys
+
+
 load_dotenv()
 
+print("Using Python executable:", sys.executable)
 
 # print("Account SID:", os.environ.get("TWILIO_ACCOUNT_SID"))
 # print("Auth Token:", os.environ.get("TWILIO_AUTH_TOKEN"))
