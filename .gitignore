@@ -22,7 +22,7 @@ client/build
 #virtual environments
 flask-server/3.9_venv
 /flask-server/venv
-
+flask-server/backup
 flask-server/__pycache__
 
 npm-debug.log*
