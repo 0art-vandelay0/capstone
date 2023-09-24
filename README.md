@@ -52,3 +52,4 @@
 -   6:30p Create server log file to track errors log. Data still not loading after working seeminly fine before.
 -   6:40p Server runs from code runner direct in file but not from venv
     -   Forgot to activate venv, cool cool cool
+-   6:50p Reaserch how to give icons different colors on render
