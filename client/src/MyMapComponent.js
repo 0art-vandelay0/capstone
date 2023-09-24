@@ -177,7 +177,7 @@ function MyMapComponent({ selectedBathroom, setSelectedBathroom }) {
                 </button>
             </div>
             {isLoaded && shouldLoadMap ? (
-                <div style={{ display: 'flex' }}>
+                <div id="mapContainer" style={{ display: 'flex' }}>
                     <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
@@ -200,7 +200,7 @@ function MyMapComponent({ selectedBathroom, setSelectedBathroom }) {
                         ))}
                     </GoogleMap>
                     {selectedBathroom && (
-                        <div style={{ marginLeft: '20px', borderBlock: '2px solid black' }}>
+                        <div id="detailsContainer" style={{ marginLeft: '20px', borderBlock: '2px solid black', backgroundColor: 'whitesmoke' }}>
                             <BathroomDetails details={selectedBathroom} />
                         </div>
                     )}
