@@ -31,3 +31,4 @@ yarn-error.log*
 
 notes.txt
 app.log
+server.log
