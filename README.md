@@ -48,3 +48,4 @@
     -   Created a script to execute to change data format in db
         -   Accidentally removed original address data but lng/lat now works in correct format
 -   6p Keeping commented out code that I know works in case i need to easily backtrack
+-   6:15p Data suddenly not reading to page
