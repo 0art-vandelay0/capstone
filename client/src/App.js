@@ -7,10 +7,10 @@ import MapControl from './MapControl';
 function App() {
     return (
         <React.Fragment>
-            <Header />
-            <MapControl />
-            {/* <Data />
-            <MyMapComponent /> */}
+            <div style={{ margin: '40px' }}>
+                <Header />
+                <MapControl />
+            </div>
         </React.Fragment>
     );
 }
