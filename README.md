@@ -55,3 +55,10 @@
 -   6:50p Reaserch how to give icons different colors on render
 -   7:30p Grab phosphorus icons for mapping
 -   8:30p Research responsive styles in addition to boilerplate app css
+
+#### Sunday 9/24/2023
+
+-   Research layouts for site
+    -   Accessibility
+    -   Aesthetics
+    -   Search different map based apps and sites
