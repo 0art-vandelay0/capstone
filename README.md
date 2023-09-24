@@ -36,3 +36,14 @@
 -   6:30p: Update mongodb with remaining bathroom data
 -   7p: Updated all Lat & Lng of locations to shortened doubles
 -   7:20p: created MapControl for future refactoring (much needed)
+
+#### Tuesday 9/19/2023
+
+-   12p Fix search CORS errors
+-   2p CORS errors back
+
+#### Saturday 9/23/2023
+
+-   5p Found that geospatial location data for mongodb needs to be in specific format
+    -   Created a script to execute to change data format in db
+        -   Accidentally removed original address data but lng/lat now works in correct format
