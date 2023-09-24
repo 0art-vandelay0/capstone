@@ -22,14 +22,14 @@ const Twilio = ({ bathroomCode }) => {
     };
 
     return (
-        <div>
+        <div id="twilioPrompt" style={{ display: 'flex', flexDirection: 'column' }}>
             <input 
                 type="text" 
                 placeholder="Phone number" 
                 value={phoneNumber} 
                 onChange={e => setPhoneNumber(e.target.value)}
             />
-            <button onClick={handleSendSMS}>Send Code via SMS</button>
+            <button id="sendButton" onClick={handleSendSMS} >Send Code via SMS</button>
         </div>
     );
 };
