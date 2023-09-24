@@ -50,3 +50,5 @@
 -   6p Keeping commented out code that I know works in case i need to easily backtrack
 -   6:15p Data suddenly not reading to page
 -   6:30p Create server log file to track errors log. Data still not loading after working seeminly fine before.
+-   6:40p Server runs from code runner direct in file but not from venv
+    -   Forgot to activate venv, cool cool cool
