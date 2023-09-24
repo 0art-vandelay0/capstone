@@ -1,0 +1,8 @@
+.bathroom-details-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bathroom-details {
+    margin-left: 10px;
+}
