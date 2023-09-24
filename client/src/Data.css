@@ -11,3 +11,15 @@
     padding-right: 5px;
     width: 500px;
 }
+
+.bathroom-location {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-div {
+        width: 100%;
+    }
+}
