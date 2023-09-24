@@ -53,3 +53,4 @@
 -   6:40p Server runs from code runner direct in file but not from venv
     -   Forgot to activate venv, cool cool cool
 -   6:50p Reaserch how to give icons different colors on render
+-   7:30 Grab phosphorus icons for mapping
