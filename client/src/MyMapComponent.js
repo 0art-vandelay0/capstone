@@ -24,8 +24,8 @@ function MyMapComponent({ selectedBathroom, setSelectedBathroom }) {
     }, []);
 
     const containerStyle = {
-        width: '525px',
-        height: '400px'
+        width: '100%',
+        height: '100%'
     };
 
     const center = {
