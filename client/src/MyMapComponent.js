@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
-import BathroomDetails from './BathroomDetails';
+// import BathroomDetails from './BathroomDetails';
 import './MyMapComponent.css';
 
 function MyMapComponent({ selectedBathroom, setSelectedBathroom }) {

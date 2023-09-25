@@ -1,15 +1,28 @@
+/* .scroll-div {
+    height: 200px;
+    overflow-y: auto;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #787777;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 500px;
+    background-color: #f4f4f4;
+} */
 .scroll-div {
     height: 200px;
     overflow-y: auto;
-    margin-bottom: 15px;
-    border: 2px solid rgb(31, 31, 31);
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px #787777;
-    padding-top: 5px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 5px;
-    width: 500px;
+    margin: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 30px;
+    border: 2px solid black;
     background-color: #f4f4f4;
 }
 
