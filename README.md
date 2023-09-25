@@ -64,3 +64,12 @@
     -   Search different map based apps and sites
 -   5:40p: Test layout fix so bathroom list is next to map rather that map next to details
 -   6:20p Can't get the components to layout how I want
+-   6:35p Noticed Fetch nearest is not working
+    -   Started fix/error log
+
+### Fix Log
+
+#### Sunday 9/24/23
+
+-   Place Bathroom Details below Bathroom Data list
+-   Fix the find_nearest fetch functionality
