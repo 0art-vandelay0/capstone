@@ -31,16 +31,16 @@ function MapControl() {
 
     return (
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <div style={{ flex: 2 }}>
+            <div style={{ flex: 1 }}>
                 <MyMapComponent selectedBathroom={selectedBathroom} setSelectedBathroom={setSelectedBathroom} />
             </div>
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <div id="dataComp">
-                    <Data setSelectedBathroom={setSelectedBathroom} />
-                </div>
-                <div id="detailsContainer">
-                    {selectedBathroom && <BathroomDetails details={selectedBathroom} />}
-                </div>
+            <div id="dataComp" style={{ flex: 1 }}>
+                <Data setSelectedBathroom={setSelectedBathroom} />
+                {selectedBathroom && (
+                    <div id="detailsContainer">
+                        <BathroomDetails details={selectedBathroom} />
+                    </div>
+                )}
             </div>
         </div>
     );
