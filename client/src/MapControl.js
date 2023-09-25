@@ -30,7 +30,7 @@ function MapControl() {
         <div style={{ flex: 1 }}>
             <MyMapComponent selectedBathroom={selectedBathroom} setSelectedBathroom={setSelectedBathroom} />
         </div>
-            <div style={{ flex: 1 }}>
+            <div id="dataComp" style={{ flex: 1 }}>
                 <Data setSelectedBathroom={setSelectedBathroom} />
             </div>
         </div>
