@@ -95,11 +95,11 @@ function MyMapComponent({ selectedBathroom, setSelectedBathroom }) {
                             ))}
                         </GoogleMap>
                     </div>
-                    {selectedBathroom && (
+                    {/* {selectedBathroom && (
                         <div id="detailsContainer">
                             <BathroomDetails details={selectedBathroom} />
                         </div>
-                    )}
+                    )} */}
                 </div>
             ) : (
                 <p style={{ marginTop: '10px' }}>
