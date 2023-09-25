@@ -58,7 +58,8 @@
 
 #### Sunday 9/24/2023
 
--   Research layouts for site
+-   4:30p: Research layouts for site
     -   Accessibility
     -   Aesthetics
     -   Search different map based apps and sites
+-   5:40p: Test layout fix so bathroom list is next to map rather that map next to details
